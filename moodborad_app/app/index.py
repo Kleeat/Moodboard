@@ -1,13 +1,13 @@
 from flask import Blueprint, render_template
 
+import moodborad_app.app.moods
+from moodborad_app.app.moods import moods
+
 index = Blueprint("index", __name__)
 
 
 @index.route("/")
 def home():
-    return "Hello World!"
+    mood_img = moods.get(moodborad_app.app.moods.current_mood)
+    return render_template("index.html", mood_img=mood_img)
 
-
-@index.route("/test/")
-def test():
-    return render_template("index.html")

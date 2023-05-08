@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Selector</title>
+  </head>
+  <body>
+    <form action="/mood" method="post">
+        <input type="hidden" id="username" name="username" value="{{username}}" required>
+        <input type="hidden" id="password" name="password" value="{{password}}" required>
+        <label for="mood">Current mood:</label>
+        <select id="mood" name="mood" required>
+            {% for mood in moods %}
+            <option>{{mood}}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+  </body>
+</html>
