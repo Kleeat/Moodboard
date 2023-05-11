@@ -4,17 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <link rel="stylesheet" href="../static/css/login.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=OpenSans">
     <title>Login</title>
   </head>
   <body>
-    <form action="/login" method="post">
+  <div class="page-header"></div>
+    <main>
+      <div class="glass login-box">
+        <form action="/login" method="post">
         <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
-        <br>
+        <input class="glass" type="text" id="username" name="username" required>
         <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-        <br>
-        <input type="submit" value="Submit">
+        <input class="glass" type="password" id="password" name="password" required>
+        <input class="login-button" type="submit" value="Submit">
     </form>
+      </div>
+      <div class="link-box">
+        <a href="/">Home</a>
+      </div>
+    </main>
+
   </body>
 </html>

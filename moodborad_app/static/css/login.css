@@ -1,0 +1,167 @@
+.page-header {
+  height: 100vh;
+
+  background-image: url("../img/room2.png");
+
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@keyframes grain {
+  0%, 100% { transform:translate(0, 0) }
+  10% { transform:translate(-5%, -10%) }
+  20% { transform:translate(-12%, 0) }
+  30% { transform:translate(-7%, -5%) }
+  40% { transform:translate(-5%, -20%) }
+  50% { transform:translate(-12%, -10%) }
+  60% { transform:translate(-5%, 0%) }
+  70% { transform:translate(0%, -15%) }
+  80% { transform:translate(-3%, -5%) }
+  90% { transform:translate(-10%, -10%) }
+}
+
+.page-header:after {
+  /* content is required when using :after */
+  content: "";
+  /* The grainy image */
+  animation: grain 10s steps(10) infinite;
+
+  background-image: url("../img/film-grain.png");
+  /* Specify a height and width above and beyond the page header for movement */
+  height: 300%;
+  width: 300%;
+  /* We're using opacity in place of a transparent image */
+  opacity: 0.075;
+  /* We'll need this when the animation kicks in to hold the position of the texture */
+  position: fixed;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+html {
+  overflow: hidden;
+}
+
+body {
+  margin: 0 0;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.glass {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 1vh 1vw 0 rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+.link-box {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  color: aliceblue;
+  font-family: "OpenSans", sans-serif;
+}
+
+.link-box a {
+  color: aliceblue;
+  padding: 0 0.5em;
+}
+
+.link-box a:visited {
+  color: aliceblue;
+}
+
+.login-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  height: 90%;
+  width: 90%;
+  max-width: 400px;
+  font-family: "OpenSans", sans-serif;
+  color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.login-box form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 90%;
+  max-width: 300px;
+  text-align: center;
+}
+
+.login-box input {
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 0.4em 0.5em;
+  border-radius: 35px;
+  color: white;
+  margin-bottom: 3%;
+}
+
+.login-box input:-webkit-autofill {
+  background: rgba(255, 255, 255, 0.3);
+  color: white;
+}
+
+.login-box input:autofill {
+  background: rgba(255, 255, 255, 0.3);
+  color: white;
+}
+
+.login-button {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.4));
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 5vh 5vw 0 rgba(0, 0, 0, 0.75);
+  color: white;
+  margin-top: 20%;
+}
+
+label {
+  font-size: 20px;
+  color: white;
+}
+
+@media screen and (min-width: 425px) and (max-width: 767px) {
+  .login-box {
+    height: 80%;
+    width: 75%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1079px){
+  .login-box {
+    height: 70%;
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .login-box {
+    height: 60%;
+    width: 30%;
+  }
+}

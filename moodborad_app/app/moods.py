@@ -1,7 +1,7 @@
 moods = {
-    "happy": "static/img/happy.jpg",
-    "sad": "static/img/sad.jpg",
-    "horny": "static/img/horny.jpg"
+    "Happy": "static/img/happy.jpg",
+    "Sad": "static/img/sad.jpg",
+    "Horny": "static/img/horny.jpg"
 }
 
-current_mood = "happy"
+current_mood = "Happy"

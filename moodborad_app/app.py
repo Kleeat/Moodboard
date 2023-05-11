@@ -10,4 +10,4 @@ app.register_blueprint(admin, url_prefix="/")
 
 
 if __name__ == "__main__":
-    app.run(debug=True, port=8000)
+    app.run(debug=True, port=8000, host="192.168.1.44")

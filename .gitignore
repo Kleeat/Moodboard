@@ -1,2 +1,6 @@
 venv
 .idea
+moodboard_app/__pycache__
+moodboard_app/app/__pycache__
+*.pyc
+*.pyc
