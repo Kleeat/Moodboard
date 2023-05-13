@@ -1,7 +1,7 @@
 .page-header {
   height: 100vh;
 
-  background-image: url("../img/room2.png");
+  background-image: url("../img/room.png");
 
   z-index: -1;
   position: fixed;
