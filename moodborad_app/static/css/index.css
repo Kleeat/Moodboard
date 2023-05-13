@@ -99,6 +99,7 @@ main {
 .mood-box h1, h2, h3 {
   text-align: center;
   margin: 0.2em;
+  max-width: 90%;
 }
 
 .link-box {

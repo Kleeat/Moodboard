@@ -122,16 +122,6 @@ main {
   margin-bottom: 3%;
 }
 
-.login-box input:-webkit-autofill {
-  background: rgba(255, 255, 255, 0.3);
-  color: white;
-}
-
-.login-box input:autofill {
-  background: rgba(255, 255, 255, 0.3);
-  color: white;
-}
-
 .login-button {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.4));
   border: 1px solid rgba(255, 255, 255, 0.15);
@@ -154,14 +144,14 @@ label {
 
 @media screen and (min-width: 768px) and (max-width: 1079px){
   .login-box {
-    height: 70%;
+    height: 75%;
     width: 40%;
   }
 }
 
 @media screen and (min-width: 1080px) {
   .login-box {
-    height: 60%;
+    height: 70%;
     width: 30%;
   }
 }

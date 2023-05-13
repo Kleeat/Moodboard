@@ -9,5 +9,5 @@ index = Blueprint("index", __name__)
 @index.route("/")
 def home():
     mood_img = moods.get(get_mood())
-    return render_template("index.html", mood_img=mood_img)
+    return render_template("index.html", mood_img=mood_img, mood=get_mood())
 
