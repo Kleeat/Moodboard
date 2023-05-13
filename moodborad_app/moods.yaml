@@ -1,0 +1,7 @@
+---
+  # You can add new moods here, just keep it YAML
+  # New pictures should be added to the "/static/img" directory
+  # The first mood will be the default
+  "Happy": "static/img/happy.jpg"
+  "Sad": "static/img/sad.jpg"
+  "Horny": "static/img/horny.jpg"
